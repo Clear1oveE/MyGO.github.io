@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>换进制的一些算法</title>
+      <link href="/2022/11/23/c%E8%AF%AD%E8%A8%80/"/>
+      <url>/2022/11/23/c%E8%AF%AD%E8%A8%80/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">convert</span><span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> (n%<span class="number">10</span>)+convert(n/<span class="number">10</span>)*<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">numConvert</span><span class="params">(<span class="type">int</span> number, <span class="type">int</span> n, <span class="type">int</span> m)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> N=n,ten=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(number!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        ten=ten+(number%<span class="number">10</span>)*(N/n);</span><br><span class="line">        N=n*N;</span><br><span class="line">        number=number/<span class="number">10</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> three=<span class="number">0</span>,x=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(ten!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        three=three+(ten%m)*x;</span><br><span class="line">        x*=<span class="number">10</span>;</span><br><span class="line">        ten=ten/m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> three;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>十年一舞，终有回响</title>
       <link href="/2022/11/20/postDeft/"/>
       <url>/2022/11/20/postDeft/</url>
