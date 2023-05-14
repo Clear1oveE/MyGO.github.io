@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>链表相加</title>
+      <link href="/2023/05/14/%E9%93%BE%E8%A1%A8%E7%9B%B8%E5%8A%A0/"/>
+      <url>/2023/05/14/%E9%93%BE%E8%A1%A8%E7%9B%B8%E5%8A%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="链表相加"><a href="#链表相加" class="headerlink" title="链表相加"></a>链表相加</h1><blockquote><p>给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。</p><p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p><p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>], l2 = [<span class="number">5</span>,<span class="number">6</span>,<span class="number">4</span>]</span><br><span class="line">输出：[<span class="number">7</span>,<span class="number">0</span>,<span class="number">8</span>]</span><br><span class="line">解释：<span class="number">342</span> + <span class="number">465</span> = <span class="number">807.</span></span><br></pre></td></tr></table></figure></blockquote><p><strong>关键在于t的运用，t能用于进位和结束的判断，神来之笔！</strong></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">struct</span> ListNode* <span class="title function_">addTwoNumbers</span><span class="params">(<span class="keyword">struct</span> ListNode* l1, <span class="keyword">struct</span> ListNode* l2)</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">dummy</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">cur</span> =</span> dummy;</span><br><span class="line">    <span class="type">int</span> t = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(l1 || l2 || t)&#123;</span><br><span class="line">        <span class="keyword">if</span>(l1) t += l1-&gt;val,l1=l1-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(l2) t += l2-&gt;val,l2=l2-&gt;next;</span><br><span class="line">        cur-&gt;next = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">        cur-&gt;next-&gt;val = t%<span class="number">10</span>;</span><br><span class="line">        cur-&gt;next-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        cur = cur-&gt;next;</span><br><span class="line">        t /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>哈希排序</title>
       <link href="/2023/05/14/%E5%93%88%E5%B8%8C%E6%8E%92%E5%BA%8F/"/>
       <url>/2023/05/14/%E5%93%88%E5%B8%8C%E6%8E%92%E5%BA%8F/</url>
