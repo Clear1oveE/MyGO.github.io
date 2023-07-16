@@ -8,7 +8,7 @@
       <link href="/2023/07/16/unity/"/>
       <url>/2023/07/16/unity/</url>
       
-        <content type="html"><![CDATA[<h1 id="unity使用笔记"><a href="#unity使用笔记" class="headerlink" title="unity使用笔记"></a>unity使用笔记</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="Unity使用笔记"><a href="#Unity使用笔记" class="headerlink" title="Unity使用笔记"></a>Unity使用笔记</h1><h2 id="Unity-3D的API"><a href="#Unity-3D的API" class="headerlink" title="Unity 3D的API"></a>Unity 3D的API</h2><ul><li><strong>Awake</strong><ul><li>条件：实例化脚本时调用</li><li>用途：用于游戏对象的初始化（注意：<strong>Awake</strong>函数的执行早于所有脚本的<strong>Start</strong>函数）</li></ul></li><li><strong>Start</strong><ul><li>条件：在<strong>Update</strong>函数第一次运行前调用</li><li>用途：用于游戏对象的初始化</li></ul></li><li><strong>Update</strong><ul><li>条件：每帧调用一次</li><li>用途：用于更新游戏场景和状态。（注意：与物理状态有关的更新放在<strong>FixedUpdate</strong>函数中）</li></ul></li><li><strong>FixedUpload</strong><ul><li>条件：每个固定物理时间间隔调用一次</li><li>用于物理状态的更新</li></ul></li><li><strong>LateUpload</strong><ul><li>每帧调用一次（在<strong>Upload</strong>函数调用后）</li><li>用于更新游戏场景和状态。（注意：与相机有关的更新放在这里）</li></ul></li></ul>]]></content>
       
       
       <categories>
